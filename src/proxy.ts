@@ -1,17 +1,16 @@
-// import { cookies } from "next/headers";
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
-export const middleware = async () => {
+export const proxy = async () => {
+  // QUITAR COMENTARIOS CUANDO SE CREE UN NUEVO PROYECTO
   // const cookieStore = await cookies();
   // const cookie = cookieStore.get("msp");
   // const token = cookie?.value;
 
   // const host = process.env.NEXT_PUBLIC_SERVER_FRONTEND || "";
-  // const port = process.env.LOGIN_FRONTEND_PORT || "";
+  // const port = process.env.LOGIN_FRONTEND_PORT || "3001";
   // const url = "http://" + host + ":" + port + "/login";
 
-  return NextResponse.next();
-  // QUITAR COMENTARIOS CUANDO SE PONGA EN PRODUCCIÓN
   // try {
   //   if (!token) {
   //     return NextResponse.redirect(url);
@@ -23,4 +22,10 @@ export const middleware = async () => {
 
   //   return NextResponse.redirect(url);
   // }
+};
+
+export const config = {
+  matcher: [
+    "/((?!_next/|favicon.ico|static/|images/|fonts/|api/|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.svg|.*\\.webp|.*\\.gif|.*\\.ico).*)",
+  ],
 };
