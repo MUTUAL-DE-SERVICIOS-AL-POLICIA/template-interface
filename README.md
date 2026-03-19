@@ -5,7 +5,7 @@
 ## Clonar el repositorio y agregarle un nombre nuevo del nuevo proyecto
 
 ```bash
-git clone https://github.com/MUTUAL-DE-SERVICIOS-AL-POLICIA/template-next.git nombre-frontend
+git clone https://github.com/MUTUAL-DE-SERVICIOS-AL-POLICIA/template-interface.git Nombre-Interface
 ```
 
 ## Inicializar proyecto
