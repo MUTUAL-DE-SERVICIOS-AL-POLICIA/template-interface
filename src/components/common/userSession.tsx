@@ -30,11 +30,20 @@ export const UserSession = ({ username, name, onLogout }: Props) => {
         />
       </DropdownTrigger>
       <DropdownMenu aria-label="User Actions" variant="flat">
-        <DropdownItem key="profile" className="h-14 gap-2">
+        <DropdownItem
+          key="profile"
+          textValue={`Sesión activa ${name}`}
+          className="h-14 gap-2"
+        >
           <p className="font-bold text-green-700">Sesión activa</p>
           <p>{name}</p>
         </DropdownItem>
-        <DropdownItem key="logout" color="danger" onPress={onLogout}>
+        <DropdownItem
+          key="logout"
+          textValue="Cerrar sesión"
+          color="danger"
+          onPress={onLogout}
+        >
           <p className="text-red-600">Cerrar sesión</p>
         </DropdownItem>
       </DropdownMenu>
